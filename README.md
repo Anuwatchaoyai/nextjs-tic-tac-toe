@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# แอปเว็บ Tic Tac Toe
 
-## Getting Started
+ยินดีต้อนรับสู่แอปเว็บ Tic Tac Toe! แอปพลิเคชันนี้อนุญาตให้ผู้ใช้เล่นเกม Tic Tac Toe คลาสสิกกับบอท ก่อนที่จะเล่น ผู้ใช้ต้องเข้าสู่ระบบบัญชีของตน แอปมีระบบการนับคะแนนและระดับความยากที่สามารถปรับได้สำหรับบอท
 
-First, run the development server:
+## คุณสมบัติ
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **การตรวจสอบสิทธิ์ผู้ใช้**: ผู้ใช้ต้องเข้าสู่ระบบเพื่อเล่นเกม
+- **การติดตามคะแนน**: 
+  - ได้ 1 คะแนนสำหรับการชนะ
+  - เสีย 1 คะแนนสำหรับการแพ้
+  - ได้คะแนนเพิ่ม 1 คะแนนสำหรับการชนะติดต่อกัน 3 เกม
+  - จำนวนการชนะติดต่อกันจะรีเซ็ตเมื่อแพ้
+- **ระดับความยากของบอท**: เลือกระดับความยากของบอท:
+  - **โหมดง่าย**: บอททำผิดพลาด ทำให้ผู้เล่นชนะได้
+  - **โหมดยาก**: บอทเล่นได้อย่างสมบูรณ์ ทำให้ผู้เล่นไม่สามารถชนะได้ (ผลออกมาเป็นการเสมอหรือแพ้เท่านั้น)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## กฎของเกม
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. เกมจะเล่นบนตาราง 3x3
+2. ผู้เล่นผลัดกันวางสัญลักษณ์ (X หรือ O) ในเซลล์ที่ว่าง
+3. ผู้เล่นคนแรกที่ได้สัญลักษณ์ของตน 3 อันในแถว (แนวนอน, แนวตั้ง, หรือทแยง) จะเป็นผู้ชนะ
+4. หากเซลล์ทั้งหมดเต็มโดยไม่มีผู้ชนะ เกมจะจบลงด้วยผลเสมอ
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## การติดตั้ง
 
-## Learn More
+เพื่อรันโปรเจ็กต์นี้ในเครื่องของคุณ ทำตามขั้นตอนดังนี้:
 
-To learn more about Next.js, take a look at the following resources:
+1. โคลน repository:
+   git clone https://github.com/YourUsername/tic-tac-toe.git
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. ไปที่ไดเรกทอรีโปรเจ็กต์:
+    cd tic-tac-toe
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. ติดตั้ง dependencies:
+    npm install
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. เริ่มเซิร์ฟเวอร์พัฒนา:
+    npm run dev
+    
+5. เปิดเบราว์เซอร์และไปที่ http://localhost:3000
