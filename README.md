@@ -26,7 +26,7 @@
 เพื่อรันโปรเจ็กต์นี้ในเครื่องของคุณ ทำตามขั้นตอนดังนี้:
 
 1. โคลน repository:
-   git clone https://github.com/YourUsername/tic-tac-toe.git
+   git clone https://github.com/Anuwatchaoyai/nextjs-tic-tac-toe.git
 
 2. ไปที่ไดเรกทอรีโปรเจ็กต์:
     cd tic-tac-toe
@@ -36,5 +36,5 @@
 
 4. เริ่มเซิร์ฟเวอร์พัฒนา:
     npm run dev
-    
+
 5. เปิดเบราว์เซอร์และไปที่ http://localhost:3000
